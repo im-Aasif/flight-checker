@@ -1,0 +1,36 @@
+@import "../../../styles/main.scss";
+
+.button {
+	@include font-size(16px, 14px);
+	border-radius: 4px;
+	@include margin(8px, 8px, 8px, 8px);
+
+	&:hover {
+		background-color: $colorAnchorHover;
+		color: $colorText;
+		outline: none;
+	}
+
+	&--dark {
+		background-color: $colorBackground;
+		color: $colorText;
+	}
+
+	&--light {
+		background-color: $colorAlternateBackground;
+		color: $colorAlternateText;
+	}
+
+	&--padding-16 {
+		@include padding(16px, 16px, 16px, 16px);
+	}
+
+	&--padding-8 {
+		@include padding(8px, 8px, 8px, 8px);
+	}
+
+	&--active {
+		background-color: $colorAnchorHover;
+		color: $colorText;
+	}
+}

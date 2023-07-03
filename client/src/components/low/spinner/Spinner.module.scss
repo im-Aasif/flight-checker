@@ -1,0 +1,35 @@
+@import "../../../styles/main.scss";
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	opacity: 0.75;
+	background: $colorBackground;
+
+	&__spinner {
+		margin: 0 auto;
+		height: 64px;
+		width: 64px;
+		animation: rotate 1s infinite linear;
+		border: 5px solid $colorAnchorHover;
+		border-right-color: transparent;
+		border-radius: 50%;
+	}
+}
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

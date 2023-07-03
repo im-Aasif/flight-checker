@@ -1,0 +1,22 @@
+[
+	{
+		"value": "Pune",
+		"key": "PNQ"
+	},
+	{
+		"value": "Berlin",
+		"key": "BER"
+	},
+	{
+		"value": "London",
+		"key": "LHR"
+	},
+	{
+		"value": "Frankfurt",
+		"key": "FRA"
+	},
+	{
+		"value": "Madrid",
+		"key": "MAD"
+	}
+]

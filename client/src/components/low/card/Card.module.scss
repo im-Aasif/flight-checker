@@ -1,0 +1,116 @@
+@import "../../../styles/main.scss";
+.card {
+	border: 1px solid transparent;
+	border-radius: 4px;
+	background-color: #fff;
+	color: #141414;
+	cursor: pointer;
+	@include box-shadow(0px, 16px, 20px, 0px, rgba(64, 63, 64, 0.5));
+	@include margin(16px, auto, 16px, auto);
+
+	&:hover {
+		.card__content__icon {
+			transform: scale(1.3);
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+		font-size: 16px;
+		font-weight: 500;
+		@include padding(16px, 16px, 16px, 16px);
+		@media screen and (max-width: 1250px) {
+			flex-direction: column;
+		}
+
+		&__icon {
+			max-width: 150px;
+			height: auto;
+			@include padding(16px, 16px, 16px, 16px);
+			transition: 0.2s all ease-in-out;
+			@media screen and (max-width: 1250px) {
+				width: 120px;
+			}
+		}
+
+		&__details {
+			display: flex;
+			flex-direction: column;
+			@include margin(null, null, null, 16px);
+			@include regularFont;
+			gap: 4px;
+			flex: 2;
+
+			@media screen and (max-width: 1250px) {
+				align-items: center;
+				margin: 0;
+			}
+
+			&__arrow-icon {
+				width: 24px;
+				height: auto;
+				@include margin(null, 16px, null, 16px);
+				@media screen and (max-width: 1250px) {
+					width: 24px;
+					height: auto;
+				}
+			}
+
+			&__item {
+				display: flex;
+
+				&__col-section {
+					display: flex;
+					flex-direction: column;
+				}
+				&--large {
+					@include largeFont;
+				}
+				&--regular {
+					@include regularFont;
+				}
+				&--light {
+					font-weight: 400;
+				}
+				&--weight {
+					font-weight: 700;
+				}
+				&--no-margin {
+					margin: 0;
+				}
+			}
+		}
+
+		&__price {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			&--large-weight {
+				@include largeFont;
+				font-weight: 700;
+			}
+			&--light {
+				@include regularFont;
+				font-weight: 400;
+			}
+			&--no-margin {
+				margin: 0;
+			}
+			@media screen and (max-width: 1250px) {
+				align-items: center;
+			}
+		}
+
+		&__down-arrow {
+			width: 24px;
+			height: auto;
+			@media screen and (max-width: 1250px) {
+				width: 18px;
+				height: auto;
+			}
+		}
+	}
+}

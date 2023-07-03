@@ -1,0 +1,36 @@
+$fontFamily: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+@function calculateRem($size) {
+	$remSize: calc($size/16px);
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size, $mobileSize) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	@media screen and (max-width: 1250px) {
+		font-size: calculateRem($mobileSize);
+	}
+}
+
+@mixin headerTitle {
+	font-family: $fontFamily;
+	@include font-size(24px, 16px);
+}
+
+@mixin smallFont {
+	@include font-size(14px, 12px);
+}
+
+@mixin regularFont {
+	@include font-size(16px, 14px);
+}
+
+@mixin largeFont {
+	@include font-size(22px, 18px);
+}
+
+@mixin disclaimerFont {
+	@include font-size(10px, 8px);
+	font-weight: 100;
+}

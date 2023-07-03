@@ -1,0 +1,23 @@
+@import "../../../styles/main.scss";
+
+.date-container {
+	@include padding(8px, 8px, 8px, 8px);
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	&__label {
+		display: block;
+	}
+
+	&__input {
+		border-radius: 4px;
+		// border: 1px solid transparent;
+		@include regularFont;
+		@include padding(8px, 8px, 8px, 8px);
+		@include margin(8px, null, 8px, null);
+
+		// @media screen and (max-width: 768px) {
+		// 	width: auto;
+		// }
+	}
+}
