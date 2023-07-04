@@ -118,3 +118,28 @@ Run `npm run test-coverage` will provide test case coverage report under `covera
 ## Demo
 
 Demo video is in the project - `./demo.mp4`.
+
+## Potential Issue
+
+If you face any port in use issue, please make changes in the following
+
+`./server.js` - 
+
+```javascript
+// Here port can be changed
+const port = process.env.PORT || 8081; 
+```
+
+`./client/package.json`
+
+```json
+{
+  "proxy": "http://localhost:8081/",
+}
+```
+
+`./client/src/util/constants.ts`
+```javascript
+// Here ports needs to be updated if changed in the server.js
+export const API_URL = "http://localhost:8081/api/"; 
+```
